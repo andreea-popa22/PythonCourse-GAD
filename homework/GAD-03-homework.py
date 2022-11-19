@@ -57,9 +57,11 @@ print(function4(5))
 # the value if it is an integer, otherwise it returns the value 0.
 def function5():
     x = input("Your value: ")
-    if x.isdigit():
-        return x
-    return 0
+    try:
+        val = int(x)
+        return val
+    except ValueError:
+        return 0
 
 print("--5--")
 print(function5())
